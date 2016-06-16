@@ -4,7 +4,7 @@
 #include <time.h>
 #include <ApplicationServices/ApplicationServices.h>
 
-char *get_char(int key) {
+char * get_char(int key) {
     switch ((int) key) {
         case 0:   return "a";
         case 1:   return "s";
