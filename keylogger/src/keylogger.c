@@ -126,9 +126,11 @@ char * get_char(int key) {
 
 CGEventRef on_tap(CGEventTapProxy proxy, CGEventType type, CGEventRef event, void *refcon) {
   CGKeyCode key = CGEventGetIntegerValueField(event, kCGKeyboardEventKeycode);
-  time_t now; time(&now);
+  time_t now; 
+  time(&now);
   char * c = get_char(key);
-  printf("%d %s\n", (int)now, c); fflush(stdout);
+  printf("%d %s\n", (int)now, c); 
+  fflush(stdout);
   return event;
 }
 
